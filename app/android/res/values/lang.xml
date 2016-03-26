@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_idea">捞</string>
+    <string name="drop_idea">丢</string>
+    <string name="add_idea">添加新的IDEA</string>
+</resources>

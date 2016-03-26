@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Idea-Sink</string>
+    <string name="title">标题</string>
+    <string name="content">内容</string>
+    <string name="common_title">ALL WE NEED IS SPARK</string>
+    <string name="reflash">刷新</string>
+    <string name="nick_name">昵称</string>
+    <string name="commit">提交</string>
+    <string name="input_access_key">输入密钥</string>
+    <string name="access_key">密钥</string>
+    <string name="input_comment_context">输入评论内容</string>
+</resources>

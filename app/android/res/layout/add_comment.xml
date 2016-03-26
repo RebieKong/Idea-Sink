@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="10dp"
+              android:paddingRight="10dp">
+    <TextView
+            android:id="@+id/common_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/common_title"
+            android:gravity="center_horizontal"
+            android:longClickable="true"/>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical">
+        <TextView
+                android:id="@+id/add_author_title"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/nick_name" android:textSize="14sp"
+        />
+        <EditText
+                android:layout_width="fill_parent"
+                android:id="@+id/add_author"
+                android:layout_height="45dp"/>
+        <TextView
+                android:id="@+id/add_comment_title"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="@string/input_comment_context" android:textSize="14sp"
+        />
+        <EditText
+                android:id="@+id/add_comment_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="8"
+                android:maxLines="10"
+                android:scrollbars="vertical"
+                android:gravity="top"/>
+    </LinearLayout>
+    <!--<RatingBar-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/add_comment_rate"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
+
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal">
+        <Button
+                android:id="@+id/add_comment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/commit"
+                android:onClick="addComment"
+                android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+</LinearLayout>
