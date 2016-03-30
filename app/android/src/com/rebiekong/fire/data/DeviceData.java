@@ -1,6 +1,7 @@
 package com.rebiekong.fire.data;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.telephony.TelephonyManager;
@@ -20,15 +21,15 @@ public class DeviceData implements Serializable {
     public static String androidVersion;
     public static String versionCode;
 
-    public static void setDeviceData(Activity activity) {
+    public static void setDeviceData(Context context) {
         try {
-            UUID = MUID.id(activity.getBaseContext());
+            UUID = MUID.id(context);
             if (UUID == null) UUID = "";
         } catch (Exception e) {
             UUID = "";
         }
         try {
-            mobileNumer = ((TelephonyManager) activity.getSystemService(activity.TELEPHONY_SERVICE)).getLine1Number();
+            mobileNumer = ((TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE)).getLine1Number();
             if (mobileNumer == null) mobileNumer = "";
         } catch (Exception e) {
             mobileNumer = "";
@@ -46,7 +47,7 @@ public class DeviceData implements Serializable {
             androidVersion = "";
         }
         try {
-            PackageManager packageManager = activity.getBaseContext().getPackageManager();
+            PackageManager packageManager = context.getPackageManager();
             PackageInfo packageInfo = packageManager.getPackageInfo("com.rebiekong.fire", 0);
             versionCode = packageInfo.versionName;
             if (versionCode == null) versionCode = "";

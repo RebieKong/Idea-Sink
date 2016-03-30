@@ -99,8 +99,4 @@ abstract public class BaseActivity extends Activity implements Response.Listener
     public String getCacheString(String key) {
         return getSharedPreferences("data", MODE_PRIVATE).getString(key, "");
     }
-
-    protected void initApp() {
-        DeviceData.setDeviceData(this);
-    }
 }
